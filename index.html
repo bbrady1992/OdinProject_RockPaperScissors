@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Rock, Paper, Scissors</title>
+        <meta charset="utf-8">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&family=Roboto+Condensed&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="styles/style.css">
+    </head>
+    <body>
+        <button class="game-button" id="rock-button">Rock</button>
+        <button class="game-button" id="paper-button">Paper</button>
+        <button class="game-button" id="scissors-button">Scissors</button>
+        <div id="outcome">
+
+        </div>
+        <div>
+            <label for="player-win-count">Player wins:</label>
+            <p id="player-win-count">0</p>
+            <label for="computer-win-count">Computer wins:</label>
+            <p id="computer-win-count">0</p>
+            <label for="tie-count">Ties:</label>
+            <p id="tie-count">0</p>
+
+        </div>
+        <script src="scripts/rps.js"></script>
+        <script>
+            document.getElementById("rock-button").onclick = () => playRound("Rock", computerPlay());
+            document.getElementById("paper-button").onclick = () => playRound("Paper", computerPlay());
+            document.getElementById("scissors-button").onclick = () => playRound("Scissors", computerPlay());
+        </script>
+    </body>
+</html>
